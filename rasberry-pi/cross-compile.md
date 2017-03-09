@@ -4,7 +4,7 @@
 - Ubuntu14.04LTS(on VirtualBox)
 
 ## 2. ツールチェーンの準備
-'''
+```
   # gitがインストールされていない場合
   sudo apt-get install git
 
@@ -19,10 +19,10 @@
 
   # 設定反映
   source ~/.bashrc
-'''
+```
 
 ## 3. クロスコンパイル実験
-'''
+```
   vim /path/to/hello.c
 
   #include <stdio.h>
@@ -32,9 +32,9 @@
       printf("Hello, Rasberry Pi\n");
       return 0;
   }
-'''
+```
 
-'''
+```
   vim /path/to/Makefile
 
   CXX=arm-linux-gnueabihf-gcc
@@ -43,9 +43,9 @@
       $(CXX) $(CFLAGS) -o hello hello.c
   clean:
       rm -f hello
-'''
+```
 
-'''
+```
   # ビルド
   $ make
 
@@ -57,4 +57,4 @@
   $ ./hello
   Hello, Rasberry Pi
   と表示されれば成功
-'''
+```
